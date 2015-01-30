@@ -2,7 +2,7 @@
     <div class="container">
         <div class="jumbotron col-md-6">
 
-<h1><%= @venue.venue_name.titleize() %>'s Music Schedule:</h1>
+<h1><%= @venue.venue_name() %>'s Music Schedule:</h1>
 
 <ul>
 <% @venue.bands.each do |band| %>
