@@ -7,4 +7,9 @@ describe(Venue) do
     venue = Venue.new({:venue_name => ""})
     expect(venue.save()).to eq(false)
   end
+
+  it("capitalizes the name of the venue") do
+    venue = Venue.create({:venue_name => "spankys"})
+    expect(venue.venue_name()).to eq("Spankys")
+  end
 end
