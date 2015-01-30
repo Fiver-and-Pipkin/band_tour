@@ -9,17 +9,9 @@ Installation
 ------------
 
 Install Band Tour by first cloning the repository.
-
-Using Active Record and Postgres:
-* start Postgres
-* in console, run:
-```
-rake db:schema:load
-
-```
 $ git clone http://github.com/dacravey/band_tour
-```
 
+```
 Install all of the required gems:
 * ('sinatra')
 * ('sinatra-contrib', :require => "sinatra/reloader")
@@ -32,6 +24,13 @@ group(:test)
   * ('shoulda-matchers')
 ```
 $ bundle install
+
+Using Active Record and Postgres:
+* start Postgres
+* in console, run:
+```
+rake db:schema:load
+
 ```
 
 Start the webserver:
