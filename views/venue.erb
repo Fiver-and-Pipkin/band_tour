@@ -2,7 +2,7 @@
     <div class="container">
         <div class="jumbotron col-md-6">
 
-<h1><%= @venue.venue_name() %>'s Music Schedule:</h1>
+<h1><%= @venue.venue_name.titleize() %>'s Music Schedule:</h1>
 
 <ul>
 <% @venue.bands.each do |band| %>
@@ -18,7 +18,7 @@
 <form action="/venue/<%= @venue.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
   <% Band.all.each do |band| %>
-    <input type="checkbox" name="check[]" value="<%= band.id %>"><%= band.band_name %><br>
+    <input type="checkbox" name="check[]" value="<%= band.id %>"><%= band.band_name.titleize() %><br>
   <% end %>
   <br />
   <button type="submit">Add Band to this Venue</button>
