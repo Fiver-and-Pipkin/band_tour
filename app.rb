@@ -52,3 +52,11 @@ get '/venue/:id' do
   @venue = Venue.find(params.fetch("id"))
   erb :venue
 end
+
+patch '/venue/:id' do
+  venue = Venue.find(params.fetch("id"))
+  params['check'].each do |check|
+    venue.bands << Band.find(check.to_i)
+  end
+  redirect back
+end
