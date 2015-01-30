@@ -7,22 +7,22 @@ BODY{
   margin: 0px;
   padding: 0px;
   background-image: url(../img/crowd.jpg);
-  font-family: 'Droid Serif', serif;
+  font-family: 'Cinzel Decorative', cursive;
   font-size: 15px;
   }
 
   a:link {
   color: green;
-}
-a:visited {
-  color: red;
-}
-a:hover{
-  color: red;
-}
-a:active {
-  color: yellow;
-}
+  }
+  a:visited {
+    color: purple;
+  }
+  a:hover{
+    color: yellow;
+  }
+  a:active {
+    color: green;
+  }
 
 
 
