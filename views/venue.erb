@@ -1,4 +1,8 @@
-<h1><%= @venue.venue_name %>'s Music Schedule:</h1>
+<div class="row">
+    <div class="container">
+        <div class="jumbotron col-md-6">
+
+<h1><%= @venue.venue_name.titleize() %>'s Music Schedule:</h1>
 
 <ul>
 <% @venue.bands.each do |band| %>
@@ -7,9 +11,10 @@
 </ul>
 
 <h5>Venue score based on your rating of all bands playing here: <%= @venue.bands.sum(:rating) %></h5>
+      </div>
 
 <br />
-
+      <div class="jumbotron col-md-6">
 <form action="/venue/<%= @venue.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
   <% Band.all.each do |band| %>
@@ -21,3 +26,4 @@
 
 <p><em> * No worries if the artist plays here more than once. You can track multiple shows here by checking the box each time they play. </em></p>
 <a href="/">Go back to home</a>
+      </div>
