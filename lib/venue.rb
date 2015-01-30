@@ -6,6 +6,6 @@ class Venue < ActiveRecord::Base
   private
 
   define_method(:capitalize_venue_name) do
-    self.venue_name = (venue_name.capitalize!())
+    self.venue_name = (venue_name.titleize!())
   end
 end
